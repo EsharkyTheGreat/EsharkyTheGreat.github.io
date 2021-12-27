@@ -23,7 +23,9 @@ title: EsharkyTheGreat's Personal Website                          # the main ti
 tagline: A Blog of a Cyber Sec Enthusiast | Interested in Binary Exploitation   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-A Blog of a Cyber Sec Enthusiast | Interested in Binary Exploitation | Part of IIT(BHU)CyberSec | Interested in Operating Systems, Full Stack Development, Playing CTF's and Computers in general
+  A Blog of a Cyber Sec Enthusiast | Interested in Binary Exploitation
+  Part of IIT(BHU)CyberSec | Interested in Operating Systems, Full Stack Development, 
+  Playing CTF's and Computers in general
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
