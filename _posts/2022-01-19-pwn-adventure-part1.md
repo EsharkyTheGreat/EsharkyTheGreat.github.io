@@ -5,6 +5,9 @@ categories: [Pwn]
 tags: [pwn,game hacking,setup]
 img:
     src: /assets/pwn-adventure-part1.png
+    width: 1000
+    height: 400
+    alt: pwnadventure logo
 pin: true
 ---
 
