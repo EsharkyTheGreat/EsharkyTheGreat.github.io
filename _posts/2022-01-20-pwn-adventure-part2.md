@@ -5,6 +5,7 @@ categories: [Pwn]
 tags: [pwn,game hacking,wireshark]
 pin: true
 ---
-![Logo](/assets/postimg/pwnadv-2/wireshark-banner.png)
 
 # Testing
+
+content
