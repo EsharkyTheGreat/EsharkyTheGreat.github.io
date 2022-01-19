@@ -36,3 +36,10 @@ int main()
 }
 ```
 {: file="test.c"}
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
