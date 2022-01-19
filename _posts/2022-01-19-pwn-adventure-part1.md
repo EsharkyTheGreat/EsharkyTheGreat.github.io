@@ -3,14 +3,10 @@ title: PwnAdventure Part1 - Setup
 date: 2022-01-19 12:02:00 +0530
 categories: [Pwn]
 tags: [pwn,game hacking,setup]
-img:
-    src: /assets/pwn-adventure-logo.png
-    width: 1000
-    height: 400
 pin: true
 ---
 
-# PwnAdventure Part1 - Setup
+![Logo](/assets/pwn-adventure-logo.png)
 
 ## What is this series about ?
 ---
