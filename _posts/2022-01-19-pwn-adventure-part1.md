@@ -7,7 +7,6 @@ img:
     src: /assets/pwn-adventure-logo.png
     width: 1000
     height: 400
-    alt: pwnadventure logo
 pin: true
 ---
 
@@ -50,10 +49,10 @@ PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was
 > I came across and error while installing which was `bind source path does not exist: ./postgres-data` which is also mentioned in this issue [here](https://github.com/LiveOverflow/PwnAdventure3/issues/31). It is essentially solved by creating a directory `postgres-data`.
 <br>
 
-### Installing Game Client on Windows
-
+## Installing Game Client on Windows
+---
 For installing the game client of windows download the client files from [here](https://www.pwnadventure.com/PwnAdventure3_Windows.zip) and extract it.
-Edit the `C:\Windows\System32\drivers\etc\hosts` file and add the following lines:
+Edit the `C:\Windows\System32\drivers\etc\hosts` file (with admin priviliges) and add the following lines:
 ```
 IP.IP.IP.IP master.pwn3
 IP.IP.IP.IP game.pwn3
@@ -71,4 +70,27 @@ Username=
 Password=
 ```
 The server has been configured now open the game and register yourself. After registering you get a team hash which can be used to join your team by other players.
- 
+<br>
+
+## Installing Game Client on Linux
+---
+For installing the game client of linux download the client files from [here](https://www.pwnadventure.com/PwnAdventure3_Linux.zip) and extract it.
+Edit the `/etc/hosts` file (with root priviliges) and add the following lines:
+```
+IP.IP.IP.IP master.pwn3
+IP.IP.IP.IP game.pwn3
+```
+Here replace the `IP.IP.IP.IP` with the IP address of the droplet.Now open the serevr.ini file which is in the game folder and change it to:
+```
+[MasterServer]
+Hostname=master.pwn3
+Port=3333
+
+[GameServer]
+Hostname=
+Port=3000
+Username=
+Password=
+```
+The server has been configured now open the game and register yourself. After registering you get a team hash which can be used to join your team by other players.
+<br>
