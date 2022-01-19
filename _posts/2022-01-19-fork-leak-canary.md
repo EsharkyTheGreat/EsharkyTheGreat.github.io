@@ -5,10 +5,10 @@ categories: [Pwn]
 tags: [pwn,fork,bof]
 pin: true
 ---
-## How to Bypass Stack Canary in a Network Forking Service :satellite:
+## How to Bypass Stack Canary in a Network Forking Service
 
-### What is a Stack Canary ? :bird:
-* Stack Canary is a mitigation introduced to prevent :x:buffer overflows:x:. It is a random value placed on the stack which changes each time the program is executed.
+### What is a Stack Canary ? 
+* Stack Canary is a mitigation introduced to prevent buffer overflows. It is a random value placed on the stack which changes each time the program is executed.
 * It is **usually** placed right before the base pointer and just before the function exits the value of the canary is checked. If the value of the canary is altered, the program exits else the function cleanly returns.
 
 ### Stucture of a Stack Canary 
