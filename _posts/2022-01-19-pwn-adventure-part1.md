@@ -6,20 +6,30 @@ tags: [pwn,game hacking,setup]
 pin: true
 ---
 
-## PwnAdventure Part1 - Setup
+# PwnAdventure Part1 - Setup
 
-### What is this series about ?
+## What is this series about ?
+---
 I recently came across LiverOverflow's youtube [series](https://www.youtube.com/watch?v=RDZnlcnmPUA&list=PLhixgUqwRTjzzBeFSHXrw9DnQtssdAwgG) on [PwnAdventure3](https://www.pwnadventure.com/). I got interested in this because it involves game hacking which I think is very cool. Please note that this series will not be different from that of LiveOveflow's and this blog is just a recording of my journey. I hope you enjoy it!
+---
+<br>
 
-### What is PwnAdventure ?
+## What is PwnAdventure ?
+---
 PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was made for a CTF which I think is really cool. It was originally made for education game developers about vulerabilities found in video games.
+---
+<br>
 
-### Setup
+## Setup
+---
 * Originally the game server was hosted by the organisers during the time of the CTF but it is currently down so I decided to host it on my own server.
 * I followed the same steps as LiveOverflow in this [video](https://www.youtube.com/watch?v=VkXZXwQP5FM&list=PLhixgUqwRTjzzBeFSHXrw9DnQtssdAwgG&index=2)
 * Among all the options he shows I chose to create a droplet on DigitalOcean and used Docker to run the server from the same git [repository](https://github.com/LiveOverflow/PwnAdventure3) that LiveOverflow uses.
+---
+<br>
 
-### Exact Steps
+## Exact Steps
+---
 * I registered an account on DigitalOcean using a referral link to get 100$ in credits for free. You can use this [link](https://m.do.co/c/dd4389e88fc1) to get yourselves 100$ too.
 * Then I created a droplet on DigitalOcean with the following specifications:
     * Name: pwn3
@@ -35,6 +45,8 @@ PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was
 * I then followed the instructions for installation as mention in this [repository](https://github.com/LiveOverflow/PwnAdventure3) and installed the server.
 * I then started the server by running the command - `docker-compose up -d` to run the server in detached mode.
 > I came across and error while installing which was `bind source path does not exist: ./postgres-data` which is also mentioned in this issue [here](https://github.com/LiveOverflow/PwnAdventure3/issues/31). It is essentially solved by creating a directory `postgres-data`.
+---
+<br>
 
 ### Installing Game Client on Windows
 
