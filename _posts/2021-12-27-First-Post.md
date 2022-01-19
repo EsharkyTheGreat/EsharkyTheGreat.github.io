@@ -1,7 +1,7 @@
 ---
 title: First Test Post
 date: 2021-12-27 19:21:00 +0530
-categories: [Personal, Pwn]
+categories: [Personal]
 tags: [personal, pwn]     # TAG names should always be lowercase
 image:
     src: /assets/uchihaSasuke.jpg
