@@ -27,10 +27,12 @@ The file has debug information which makes our life a lot easier. Looking at the
 ## Process Overview
 ---
 Let's look at the process in Linux. Each process has a `pid` (process id). Lets see the process in `pstree` to see its child process and threads.
+<br>
 ![pstree](/assets/postimg/pwnadv2/pstree.png)
 Here we see all of the threads and their pids as well all of these components must be handling some sort of functionality.
 <br>
 ## /proc/pid
+---
 The `/proc` is a a special directory which contains information about running processes. First we'll grab the pid through the command - 
 ```bash
 ps aux | grep -i pwn
@@ -40,4 +42,18 @@ Then change the directory to `/proc/pid` you'll see something like this in the d
 Here the files represent different information about the process. E.g `cmdline`shows the cmdline arguments for running the process, `maps` show the virtual memory mapping of different libraries,stack,heap etc,the `fd` folder has info about the open file descriptors,`environ` has information about the environment variables.
 ![fd](/assets/postimg/pwnadv2/fd.png)
 Upon inspecting the fd directory we see that there are standard file descriptors open like `STDIN`,`STDOUT`,`STDERR` etc and also file descriptors for packed textures and models.
-
+<br>
+## Network
+---
+Lets check the network side of things with the command - 
+```bash
+netstat -ac | grep "pwn"
+```
+![netstat](/assets/postimg/pwnadv2/netstat.png)
+We see that there are 2 repeating connections to `master.pwn3:3333` and `master.pwn3:3000` where the second connection is essentially to `game.pwn3:3000` as its connecting to the game server and thats the hostname we gave it.
+<br>
+## Master Server
+---
+Lets see the packets sent to the master server when the game starts. So we'll check the packets sent to port 3333 on wireshark.
+![master](/assets/postimg/pwnadv2/master.png)
+We see TLS as the protocol which must have been used for the certificate for secure communication between the master server and our client. We see strings like ghostintheshellcode which is the name of the organizer.
