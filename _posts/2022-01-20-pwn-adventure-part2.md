@@ -26,10 +26,9 @@ The file has debug information which makes our life a lot easier. Looking at the
 <br>
 ## Process Overview
 ---
-Let's look at the process in Linux. Each process has a `pid` (process id). Lets see the process in `pstree` to see its child process and threads.
-<br>
-![pstree](/assets/postimg/pwnadv2/pstree.png)
+Let's look at the process in Linux. Each process has a `pid` (process id). Lets see the process in `pstree` to see its child process and threads.  
 Here we see all of the threads and their pids as well all of these components must be handling some sort of functionality.
+![pstree](/assets/postimg/pwnadv2/pstree.png)
 <br>
 ## /proc/pid
 ---
@@ -57,3 +56,9 @@ We see that there are 2 repeating connections to `master.pwn3:3333` and `master.
 Lets see the packets sent to the master server when the game starts. So we'll check the packets sent to port 3333 on wireshark.
 ![master](/assets/postimg/pwnadv2/master.png)
 We see TLS as the protocol which must have been used for the certificate for secure communication between the master server and our client. We see strings like ghostintheshellcode which is the name of the organizer.
+<br>
+## Game Server
+---
+Lets see the packets sent to the game server on port 3000 for me. We constantly see packets being exchanged between the server. There are 2 things to see. First, When we move we see a special string `mv` in the packets.
+![mv](/assets/postimg/pwnadv2/mv.png)
+
