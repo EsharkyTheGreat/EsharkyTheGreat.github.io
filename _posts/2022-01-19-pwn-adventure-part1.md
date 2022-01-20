@@ -16,12 +16,12 @@ I recently came across LiverOverflow's youtube [series](https://www.youtube.com/
 
 ## What is PwnAdventure ?
 ---
-PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was made for a CTF which I think is really cool. It was originally made for education game developers about vulerabilities found in video games.
+PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was made for a CTF which I think is really cool. It was originally made for education game developers about vulnerabilities found in video games.
 <br>
 
 ## Setup
 ---
-* Originally the game server was hosted by the organisers during the time of the CTF but it is currently down so I decided to host it on my own server.
+* Originally the game server was hosted by the organizers during the time of the CTF but it is currently down so I decided to host it on my own server.
 * I followed the same steps as LiveOverflow in this [video](https://www.youtube.com/watch?v=VkXZXwQP5FM&list=PLhixgUqwRTjzzBeFSHXrw9DnQtssdAwgG&index=2)
 * Among all the options he shows I chose to create a droplet on DigitalOcean and used Docker to run the server from the same git [repository](https://github.com/LiveOverflow/PwnAdventure3) that LiveOverflow uses.
 <br>
@@ -48,12 +48,12 @@ PwnAdventure is a MMORPG which is intentionally vulnerable to hacks and this was
 ## Installing Game Client on Windows
 ---
 For installing the game client of windows download the client files from [here](https://www.pwnadventure.com/PwnAdventure3_Windows.zip) and extract it.
-Edit the `C:\Windows\System32\drivers\etc\hosts` file (with admin priviliges) and add the following lines:
+Edit the `C:\Windows\System32\drivers\etc\hosts` file (with admin privileges) and add the following lines:
 ```
 IP.IP.IP.IP master.pwn3
 IP.IP.IP.IP game.pwn3
 ```
-Here replace the `IP.IP.IP.IP` with the IP address of the droplet.Now open the serevr.ini file which is in the game folder and change it to:
+Here replace the `IP.IP.IP.IP` with the IP address of the droplet.Now open the server.ini file which is in the game folder and change it to:
 ```
 [MasterServer]
 Hostname=master.pwn3
@@ -76,7 +76,7 @@ Edit the `/etc/hosts` file (with root priviliges) and add the following lines:
 IP.IP.IP.IP master.pwn3
 IP.IP.IP.IP game.pwn3
 ```
-Here replace the `IP.IP.IP.IP` with the IP address of the droplet.Now open the serevr.ini file which is in the game folder and change it to:
+Here replace the `IP.IP.IP.IP` with the IP address of the droplet.Now open the server.ini file which is in the game folder and change it to:
 ```
 [MasterServer]
 Hostname=master.pwn3
