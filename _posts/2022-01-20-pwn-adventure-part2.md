@@ -27,7 +27,8 @@ The file has debug information which makes our life a lot easier. Looking at the
 ## Process Overview
 ---
 Let's look at the process in Linux. Each process has a `pid` (process id). Lets see the process in `pstree` to see its child process and threads.  
-Here we see all of the threads and their pids as well all of these components must be handling some sort of functionality.
+Here we see all of the threads and their pids as well all of these components must be handling some sort of functionality.  
+ 
 ![pstree](/assets/postimg/pwnadv2/pstree.png)
 <br>
 ## /proc/pid
@@ -59,6 +60,10 @@ We see TLS as the protocol which must have been used for the certificate for sec
 <br>
 ## Game Server
 ---
-Lets see the packets sent to the game server on port 3000 for me. We constantly see packets being exchanged between the server. There are 2 things to see. First, When we move we see a special string `mv` in the packets.
+Lets see the packets sent to the game server on port 3000 for me. We constantly see packets being exchanged between the server. There are 2 things to see.  
+First, When we move we see a special string `mv` in the packets.  
+Second, When we jump we see a special string `jmp` in the packets.  
+
 ![mv](/assets/postimg/pwnadv2/mv.png)
+![jmp](/assets/postimg/pwnadv2/jmp.png)
 
