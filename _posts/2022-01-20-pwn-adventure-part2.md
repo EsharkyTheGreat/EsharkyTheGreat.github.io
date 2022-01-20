@@ -19,4 +19,11 @@ We set up the game server and game client for both windows and linux in the prev
 ## Libraries
 ---
 Lets start first by looking the dynamic libraries linked with the game binary through the `ld` command.
-
+![ld_ouptut](/assets/postimg/pwnadv2/ld_output.png)
+We see many common libraries which are being used. There is `libpthread` which is used for threading. There is a custom `libGameLogic` library which might be useful. Using the file command on `libGameLogic` we see -
+![file_output](/assets/postimg/pwnadv2/file_gamelogic.png)
+The file has debug information which makes our life a lot easier. Looking at the other libraries we see `libcrypto` and `libssl` which might be used for encryption and TLS.
+<br>
+## Process Overview
+---
+Let's look at the process in Linux. Each process has a `pid` (process id).
