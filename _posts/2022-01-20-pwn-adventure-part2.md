@@ -26,4 +26,18 @@ The file has debug information which makes our life a lot easier. Looking at the
 <br>
 ## Process Overview
 ---
-Let's look at the process in Linux. Each process has a `pid` (process id).
+Let's look at the process in Linux. Each process has a `pid` (process id). Lets see the process in `pstree` to see its child process and threads.
+![pstree](/assets/postimg/pwnadv2/pstree.png)
+Here we see all of the threads and their pids as well all of these components must be handling some sort of functionality.
+<br>
+## /proc/pid
+The `/proc` is a a special directory which contains information about running processes. First we'll grab the pid through the command - 
+```bash
+ps aux | grep -i pwn
+```
+Then change the directory to `/proc/pid` you'll see something like this in the directory.
+![proc](/assets/postimg/pwnadv2/proc.png)
+Here the files represent different information about the process. E.g `cmdline`shows the cmdline arguments for running the process, `maps` show the virtual memory mapping of different libraries,stack,heap etc,the `fd` folder has info about the open file descriptors,`environ` has information about the environment variables.
+![fd](/assets/postimg/pwnadv2/fd.png)
+Upon inspecting the fd directory we see that there are standard file descriptors open like `STDIN`,`STDOUT`,`STDERR` etc and also file descriptors for packed textures and models.
+
