@@ -14,17 +14,17 @@ Now that we have an overview of the game lets load the `libGameLogic` library in
 ---
 If we open the `libGameLogic.so` file in IDA we see that IDA automatically demangles all the function names for us.
 
-![demangled]()
+![demangled](/assets/postimg/pwnadv3/demangled.png)
 
 Let's also look at the data segment of the library for some global variables which can be used later.
 
-![bss]()
+![bss](/assets/postimg/pwnadv3/bss.png)
 
 ## Functions
 ---
 Let's look at the Functions that could be called when we jump. We'll set a breakpoint on the function to later to see if it was called.
 
-![jump]()
+![jump](/assets/postimg/pwnadv3/jmpfunc.png)
 
 We see that there is a function which gives the server information about jumping and this action is added to a server queue.
 
